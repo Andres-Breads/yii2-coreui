@@ -7,17 +7,15 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class CoreUiAsset extends AssetBundle
+class SimplebarAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/coreui/coreui/dist';
+    public $sourcePath = '@vendor/npm-asset/simplebar/dist';
     public $css = [
-        "css/coreui.min.css",
+        "css/simplebar.min.css",
     ];
     public $js = [
-        "js/coreui.min.js",
+        "js/simplebar.min.js",
     ];
     public $depends = [
-        BaseAsset::class,
-        SimplebarAsset::class,
     ];
 }
