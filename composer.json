@@ -1,18 +1,29 @@
 {
     "name": "andres-breads/yii2-coreui",
     "description": "coreui template for yii2",
-    "type": "yii2-extension",
     "keywords": ["yii2","extension","coreui","layout"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/Andres-Breads/yii2-coreui"
+    },
     "require": {
         "coreui/coreui": "^4.2",
-        "php": "^8.0",
-        "yiisoft/yii2": "^2.0",
-        "yiisoft/yii2-bootstrap5": "^2.0"
+        "php": ">=8.0",
+        "yiisoft/yii2": "~2.0.45",
+        "yiisoft/yii2-bootstrap5": "~2.0.2"
     },
-    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "~9.5.0"
+    },
     "autoload": {
         "psr-4": {
             "andresbreads\\coreui\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     },
     "authors": [
