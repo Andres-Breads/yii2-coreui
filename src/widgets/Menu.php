@@ -55,7 +55,7 @@ class Menu extends \yii\widgets\Menu
     /**
      * @inheritdoc
      */
-    public $labelTemplate = '<p>{label} {submenuFlag} {badge}</p>';
+    public $labelTemplate = '{label} {submenuFlag} {badge}';
 
     /**
      * @var string submenu wrapper
