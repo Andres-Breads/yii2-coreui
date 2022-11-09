@@ -55,7 +55,7 @@ class Menu extends \yii\widgets\Menu
     /**
      * @inheritdoc
      */
-    public $labelTemplate = '{label} {submenuFlag} {badge}';
+    public $labelTemplate = '{label} {badge}';
 
     /**
      * @var string submenu wrapper
@@ -156,17 +156,11 @@ class Menu extends \yii\widgets\Menu
         }
         $iconHtml = '<i class="'.$iconClass.'"></i>';
 
-        $submenuFlag = '';
-        if (isset($item['items'])) {
-            $submenuFlag = '<i class="right fas fa-angle-left"></i>';
-        }
-
         $template = ArrayHelper::getValue($item, 'template', (isset($item['linkTemplate']))? $item['linkTemplate'] : $this->linkTemplate);
         return strtr($template, [
             '{label}' => strtr($this->labelTemplate, [
                 '{label}' => $item['label'],
                 '{badge}' => $item['badge'] ?? '',
-                '{submenuFlag}' => $submenuFlag
             ]),
             '{submenuClass}' => isset($item['items']) ? 'nav-group-toggle' : '',
             '{url}' => isset($item['url']) ? Url::to($item['url']) : '#',
