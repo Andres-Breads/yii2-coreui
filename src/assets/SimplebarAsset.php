@@ -11,10 +11,10 @@ class SimplebarAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/npm-asset/simplebar/dist';
     public $css = [
-        "css/simplebar.min.css",
+        "simplebar.min.css",
     ];
     public $js = [
-        "js/simplebar.min.js",
+        "simplebar.min.js",
     ];
     public $depends = [
     ];
