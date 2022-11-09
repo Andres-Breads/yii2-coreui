@@ -7,6 +7,7 @@
     "support": {
         "source": "https://github.com/Andres-Breads/yii2-coreui"
     },
+    "minimum-stability": "stable",
     "require": {
         "coreui/coreui": "^4.2",
         "php": ">=8.0",
