@@ -1,0 +1,24 @@
+{
+    "name": "andres-breads/yii2-coreui",
+    "description": "coreui template for yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","coreui","layout"],
+    "require": {
+        "coreui/coreui": "^4.2",
+        "php": "^8.0",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-bootstrap5": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "andresbreads\\coreui\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Aucaruri",
+            "email": "carlos.aucaruri@gmail.com"
+        }
+    ]
+}
