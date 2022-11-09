@@ -9,16 +9,13 @@ use yii\web\AssetBundle;
  */
 class CoreUiAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/coreui/coreui/dist';
+    public $sourcePath = '@andresbreads/coreui/assets';
     public $css = [
-        "css/coreui.min.css",
+        "css/style.min.css",
     ];
     public $js = [
-        "js/coreui.min.js",
     ];
     public $depends = [
         BaseAsset::class,
-        SimplebarAsset::class,
-        StyleAsset::class,
     ];
 }
