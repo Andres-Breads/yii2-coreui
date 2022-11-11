@@ -2,7 +2,7 @@
 namespace andresbreads\coreui\widgets;
 
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap5\Html;
 use yii\helpers\Url;
 
 /**
@@ -92,6 +92,9 @@ class Menu extends \yii\widgets\Menu
         'role' => 'menu',
     ];
 
+    /**
+     * {@inheritDoc}
+     */
     protected function renderItems($items)
     {
         $n = count($items);
@@ -139,6 +142,9 @@ class Menu extends \yii\widgets\Menu
         return implode("\n", $lines);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     protected function renderItem($item)
     {
         if(isset($item['header']) && $item['header']) {

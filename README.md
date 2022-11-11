@@ -26,13 +26,13 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Make your module or controller layout to be `andresbreads/coreui/src/layouts/main.php` by modifiying the layout attribute.
+Make your module or controller layout to be `@andresbreads/coreui/layouts/main.php` by modifiying the layout attribute.
 
 Also you can make your `@app/views/layouts/main.php` to look like:
 
 ```html
 
-<?php $this->beginContent('andresbreads/coreui/src/layouts/main.php') ?>
+<?php $this->beginContent('@andresbreads/coreui/layouts/main.php') ?>
     <?= $content ?>
 <?php $this->endContent() ?>
 
