@@ -37,3 +37,18 @@ Also you can make your `@app/views/layouts/main.php` to look like:
 <?php $this->endContent() ?>
 
 ```
+
+If you want to customize the menus, footer and user thumbnail,
+these are the params used inside the layout to overwrite them:
+
+```php
+
+$this->params['mainMenu']; // Receives a list to be used in Menu::widget()
+$this->params['topLeftMenu']; // Receives a list to be used in Nav::widget()
+$this->params['topRightMenu']; // Receives a list to be used in Nav::widget()
+$this->params['userThumbnail']; // Receives a string to be used in <img src>
+$this->params['userMenu']; // Receives a list to be used in Dropdown::widget()
+$this->params['leftFooter']; // Receives a string
+$this->params['rightFooter']; // Receives a string
+
+```
