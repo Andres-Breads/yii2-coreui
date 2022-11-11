@@ -6,7 +6,6 @@
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
-use yii\helpers\Url;
 use andresbreads\coreui\widgets\Menu;
 use andresbreads\coreui\widgets\Dropdown;
 use andresbreads\coreui\assets\CoreUiAsset;
@@ -62,6 +61,9 @@ $this->params['topRightMenu'] = $this->params['topRightMenu'] ?? [
     ['label' => '<i class="fas fa-list"></i>', 'encode' => false, 'url' => Yii::$app->homeUrl],
     ['label' => '<i class="fas fa-envelope-open"></i>', 'encode' => false, 'url' => Yii::$app->homeUrl],
 ];
+
+list(,$url) = Yii::$app->assetManager->publish('@andresbreads/coreui/assets');
+$this->params['userThumbnail'] = $this->params['userThumbnail'] ?? $url.'/img/avatars/8.jpg';
 
 $this->params['userMenu'] = $this->params['userMenu'] ?? [
     ['label' => Yii::t('app', 'Account')],
@@ -147,7 +149,7 @@ $this->params['rightFooter'] = $this->params['rightFooter'] ?? Yii::powered();
                 <li class="nav-item dropdown">
                     <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <div class="avatar avatar-md">
-                            <img class="avatar-img" src="assets/img/avatars/8.jpg" alt="<?= Yii::$app->user->identity->username ?>">
+                            <img class="avatar-img" src="<?= $this->params['userThumbnail'] ?>" alt="<?= Yii::$app->user->identity->username ?>">
                         </div>
                     </a>
                     <?= Dropdown::widget([
